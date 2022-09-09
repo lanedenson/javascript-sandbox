@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar Donation Calculator</title>
+</head>
+
+<body>
+    <h1>Calendar Donation Calculator</h1>
+    <p>If everyone picks a date on the calendar for October, and donates that date's amount (e.g. October 15 = $15), how
+        much will be donated in total?</p>
+
+        <h3>Further refinements: </h3>
+        <ul>
+        <li>Can this be done with fewer than 3 variables? (Probably) </li>
+        <li>Create a graphical representation of a calendar (flexbox) and put the relevant info in each cell.</li>
+        <li>Provide a dropdown with a list of months and calculate the total based on the month selected.</li>
+        </ul>
+    <script type="text/javascript">
+        let count;
+        let sum;
+        let previousSum = 0;
+        for (count = 1; count < 32; count++) {
+            sum = previousSum + count;
+            document.write("Day " + count + " total: " + sum + "<br/>");
+            document.write("(" + previousSum + " + " + count + " = " + sum + ")</br>");
+            document.write("<br />");
+            previousSum = sum;
+        }
+        document.write("The total amount donated over 31 days will be $" + sum + ".");
+    </script>
+
+</body>
+
+</html>
