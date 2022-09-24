@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Page Title</title>
+
+</head>
+
+<body>
+
+  <input id="textBox" type="text"></input>
+  <div id="output"></div>
+
+  <script>
+    "use strict";
+    /*
+     When the user presses a key, the browser will call the function you provided, and will pass it a parameter containing information about this event, including the particular key that the user pressed
+      */
+
+    const textBox = document.querySelector("#textBox");
+    const output = document.querySelector("#output");
+
+    textBox.addEventListener('keydown', event =>
+      output.textContent = `You pressed "${event.key}".`);
+  </script>
+</body>
+
+</html>
