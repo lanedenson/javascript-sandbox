@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h2>Purpose:</h2>
+<p>To find all prime numbers (numIterate) between 0 and 10. Prime numbers are those that are only divisible by 1 and themselves.</p>    
+<h2>Approach:</h2>
+<p>Loop 1: Iterate through all integers less than or equal to 10.</p>
+<p>Loop 2: For each number, iterate through 2 and 1 less than that number (isItPrime)</p>
+<p>Test to see if the humber is divisible by any number other than itself</p>
+<p>Do this by using the remainder operator (%); divide numIterate by isItPrime. If the remainder is 0 at any point, then it is NOT prime</p>
+
+<script>
+outer:
+ for (let numIterate = 2; numIterate <= 10; numIterate++) {
+    for (let isItPrime = 2; isItPrime < numIterate; isItPrime++){
+        if (numIterate % isItPrime == 0) continue outer;
+    }
+    console.log(numIterate); 
+}
+    </script>
+</body>
+</html>
