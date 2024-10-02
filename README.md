@@ -1,2 +1,2 @@
 # Javascript Sandbox
-For various and sundry Javascript experiments
+For old various and sundry Javascript stuff
